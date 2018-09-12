@@ -1,0 +1,9 @@
+import os, glob
+
+current_dir = os.path.dirname(os.path.realpath(__file__)) # Initialize the working dir to the current dir.
+
+rename():
+  for old_folder_name in os.listdir(current_dir):
+      if old_folder_name[0:6] == 'en-US_':
+          new_folder_name = old_folder_name[6:8].upper()
+          os.rename(old_folder_name, new_folder_name)
